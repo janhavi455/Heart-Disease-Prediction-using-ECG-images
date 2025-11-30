@@ -128,23 +128,23 @@ class ECGClassifier:
         
         return history, history_fine, class_names
 
-# Train the model
+# # Train the model
 
-if __name__ == "__main__":
-    classifier = ECGClassifier()
+# if __name__ == "__main__":
+#     classifier = ECGClassifier()
     
-    dataset_path = r"C:\Users\janha\OneDrive\Desktop\HEART DISAESE PRED USING ECG IMG\ecg_dataset"
+#     dataset_path = r"C:\Users\janha\OneDrive\Desktop\HEART DISAESE PRED USING ECG IMG\ecg_dataset"
     
-    # Quick check: load data only
-    X, y, class_names = classifier.prepare_data(dataset_path)
-    print(f"Number of images found: {len(X)}")
-    print(f"Number of labels found: {len(y)}")
-    print(f"Classes detected: {class_names}")
+#     # Quick check: load data only
+#     X, y, class_names = classifier.prepare_data(dataset_path)
+#     print(f"Number of images found: {len(X)}")
+#     print(f"Number of labels found: {len(y)}")
+#     print(f"Classes detected: {class_names}")
     
-    # If counts look correct, start training
-    if len(X) == 0:
-        print("No images found! Check your dataset path and folder structure.")
-    else:
-        history, history_fine, class_names = classifier.train(dataset_path, epochs=5, batch_size=16)
-        classifier.model.save('ecg_heart_disease_model.h5')
-        print("Model training completed and saved!")
+#     # If counts look correct, start training
+#     if len(X) == 0:
+#         print("No images found! Check your dataset path and folder structure.")
+#     else:
+#         history, history_fine, class_names = classifier.train(dataset_path, epochs=5, batch_size=16)
+#         classifier.model.save('ecg_heart_disease_model.h5')
+#         print("Model training completed and saved!")
